@@ -25,7 +25,8 @@ use App\Http\Controllers\Grades\GradeController;
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::group( [ 'prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ] ], function(){ 
+    Route::group( [ 'prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ] ], function(){
+        // 'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ] // when close application english language and open it again, it opens in English
         Route::get('/dashboard', function() { return view('dashboard'); });
         Route::resource('Grades', GradeController::class);
 

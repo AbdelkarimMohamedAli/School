@@ -1,27 +1,17 @@
 @extends('layouts.master')
 @section('css')
+<!-- @toastr_css -->
+    @section('title')
+    {{ trans('Grades_trans.title_page') }}
 
-@section('title')
-    empty
-@stop
+    @stop
 @endsection
 @section('page-header')
-<!-- breadcrumb -->
-<div class="page-title">
-    <div class="row">
-        <div class="col-sm-6">
-            <h4 class="mb-0"> {{trans('main_trans.Grades')}}</h4>
-        </div>
-        <div class="col-sm-6">
-            <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
-                <li class="breadcrumb-item"><a href="#" class="default-color">Home</a></li>
-                <li class="breadcrumb-item active">{{trans('main_trans.Grades')}}</li>
-            </ol>
-        </div>
-    </div>
-</div>
-<!-- breadcrumb -->
+    @section('PageTitle')
+        {{trans('main_trans.Grades')}}
+    @stop
 @endsection
+
 @section('content')
 <!-- row -->
 <div class="row">
@@ -83,7 +73,7 @@
                                     <div class="modal-header">
                                         <h5 style="font-family: 'Cairo', sans-serif;" class="modal-title"
                                             id="exampleModalLabel">
-                                            {{ trans('Grades_trans.add_Grade') }}
+                                            {{ trans('Grades_trans.edit_Grade') }}
                                         </h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
@@ -233,5 +223,9 @@
 <!-- row closed -->
 @endsection
 @section('js')
-
+    <!-- @toastr_js
+    @toastr_render -->
 @endsection
+
+
+

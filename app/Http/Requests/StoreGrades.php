@@ -24,7 +24,8 @@ class StoreGrades extends FormRequest
     public function rules(): array
     {
         return [
-           'Name' => 'required|unique:posts|max:255',
+         //  'Name' => 'required|unique:posts|max:255',
+           'Name' => 'required',
             // 'Name.*' => ['required', UniqueTranslationRule::for('grades')], 
             
             // 'Notes' => 'required',
